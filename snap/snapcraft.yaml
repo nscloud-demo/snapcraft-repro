@@ -6,10 +6,8 @@ confinement: classic
 contact: https://github.com/nscloud-demo/snapcraft-repro/discussions
 issues: https://github.com/nscloud-demo/snapcraft-repro/issues
 website: https://namespace.so/
-
-platforms:
-  amd64:
-  arm64:
+adopt-info: dummy
+version: dev
 
 parts:
   dummy:

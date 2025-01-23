@@ -1,0 +1,19 @@
+name: dummy
+base: core24
+summary: A dummy app
+grade: stable
+confinement: classic
+contact: https://github.com/nscloud-demo/snapcraft-repro/discussions
+issues: https://github.com/nscloud-demo/snapcraft-repro/issues
+website: https://namespace.so/
+
+platforms:
+  amd64:
+  arm64:
+
+parts:
+  dummy:
+    source: .
+    plugin: nil
+    override-build: |
+      echo "this is a build"

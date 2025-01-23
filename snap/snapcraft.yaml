@@ -8,6 +8,8 @@ issues: https://github.com/nscloud-demo/snapcraft-repro/issues
 website: https://namespace.so/
 adopt-info: dummy
 version: dev
+description: |
+  This is a dummy app to reproduce an issue with Snapcraft build in Namespace Ubuntu environment.
 
 parts:
   dummy:

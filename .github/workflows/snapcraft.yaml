@@ -11,6 +11,13 @@ jobs:
         uses: actions/checkout@v4
       - uses: snapcore/action-build@v1
 
+      - name: Breakpoint on failure
+        if: failure() 
+        uses: namespacelabs/breakpoint-action@v0
+        with:
+          duration: 15m
+          authorized-users: edganiukov,hugosantos,n-g,htr,nichtverstehen,gmichelo,pavolmarko
+
   github-amd64:
     runs-on:
       - ubuntu-24.04

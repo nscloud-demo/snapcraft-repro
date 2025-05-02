@@ -9,6 +9,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - run: |
+          _LXD_SNAP_DEVCGROUP_CONFIG="/var/lib/snapd/cgroup/snap.lxd.device"
+          grep -qxF 'self-managed=true' "${_LXD_SNAP_DEVCGROUP_CONFIG}" || echo 'self-managed=true' >> "${_LXD_SNAP_DEVCGROUP_CONFIG}"
+          
       - uses: snapcore/action-build@v1
 
       - name: Breakpoint on failure

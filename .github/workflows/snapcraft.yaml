@@ -15,6 +15,13 @@ jobs:
       #     sudo mkdir -p /var/lib/snapd/cgroup
       #     echo 'self-managed=true' | sudo tee  "${_LXD_SNAP_DEVCGROUP_CONFIG}"
           
+      - name: Breakpoint 
+        uses: namespacelabs/breakpoint-action@v0
+        with:
+          duration: 30m
+          authorized-users: edganiukov,hugosantos,n-g,htr,nichtverstehen,gmichelo,pavolmarko
+
+
       - uses: snapcore/action-build@v1
 
       - name: Breakpoint on failure
@@ -30,6 +37,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Breakpoint 
+        uses: namespacelabs/breakpoint-action@v0
+        with:
+          duration: 30m
+          authorized-users: edganiukov,hugosantos,n-g,htr,nichtverstehen,gmichelo,pavolmarko
+
       - uses: snapcore/action-build@v1
 
       - name: Breakpoint on failure

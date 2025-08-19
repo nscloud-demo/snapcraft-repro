@@ -15,9 +15,9 @@ jobs:
       #     sudo mkdir -p /var/lib/snapd/cgroup
       #     echo 'self-managed=true' | sudo tee  "${_LXD_SNAP_DEVCGROUP_CONFIG}"
           
-      - run: |
-          sudo mkdir /run/user/1001
-          sudo chown 1001 /run/user/1001
+      #- run: |
+      #    sudo mkdir /run/user/1001
+      #    sudo chown 1001 /run/user/1001
 
 
       - uses: snapcore/action-build@v1
